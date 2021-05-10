@@ -189,6 +189,17 @@ var mese= {
     '10' : 'Outubro',
     '11' : 'Novembro',
     '12' : 'Dezembro'}
+
+function dataAtualFormatada() {
+
+    var data = new Date(),
+        dia = data.getDate().toString(),
+        diaF = (dia.length == 1) ? '0' + dia : dia,
+        mes = (data.getMonth() + 1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+        mesF = (mes.length == 1) ? '0' + mes : mes,
+        anoF = data.getFullYear();
+    return anoF + "-" + mesF + "-" + diaF;
+}
  
     function abrir(mes)
     {
@@ -239,15 +250,15 @@ var mese= {
                 
 
          html+='<div class="col">';
-            html+='<label for="">Data <input type="date" id="data" class="form-control"></label> ';
+            html+='<label for="">Dia <input type="hidden" id="data" value="'+dataAtualFormatada()+'" class="form-control"> <input type="number" id="dia" min="1" max="31" class="form-control"></label> ';
         html+='</div>'; 
 
         html+='<div class="col">';
             html+='<label for="">Valor <input type="number" id="valor" step="0.01" class="form-control"></label> ';
         html+='</div>';
 
-        html+='<div class="col">';
-            html+='<label for="">Descrição <input type="text" id="descricao" class="form-control"></label> ';
+        html+='<div class="col-sm-6">';
+            html+='<label class="col-sm-12" for="">Descrição <input type="text" id="descricao" class="form-control"></label> ';
         html+='</div>';         
 
         html+='</div>';       
