@@ -4,10 +4,10 @@ class Controller
 {
     public $dados;
 
-    public function mostrarIndex($nome)
+    public function mostrarIndex($nome,$dados,$collapse)
     {
-        $this->dados=$nome;
-        require_once('Views/index.php');
+        $this->dados=$dados;
+        require_once('Views/'.$nome.'.php');
     }
 }
 ?>

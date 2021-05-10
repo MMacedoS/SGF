@@ -1,3 +1,4 @@
+<?php  $path="http://$_SERVER[HTTP_HOST]".'/sgf';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -44,7 +45,7 @@
     <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
             <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
-                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?=$path?>/Home/index">Inicio</a></li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Cadastros</a>
                     <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
@@ -52,8 +53,18 @@
                        <li class="nav-item"><a class="nav-link" href="">Report 2</a></li>
                     </ul>
                 </li> -->
-                <li class="nav-item"><a class="nav-link" href="#">Entrada</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Saida</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#submenu1" href="" >Cartões</a>
+                <ul class="list-unstyled flex-column pl-3 collapse <?php if($collapse=='painelcartao' || $collapse=='cadcartao'){ echo "show";}?>" id="submenu1" aria-expanded="false">
+                       <li class="nav-item"><a class="nav-link  <?php if($collapse=='painelcartao'){ echo "text-secondary";}?>" href="<?=$path?>/Home/cartoes">Painel</a></li>
+                       <li class="nav-item"><a class="nav-link <?php if($collapse=='cadcartao'){ echo "text-secondary";}?>" href="<?=$path?>/Home/cadcartoes">Cadastro</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#submenu2" href="<?=$path?>/Home/conta">Conta</a>
+                    <ul class="list-unstyled flex-column pl-3 collapse <?php if($collapse=='painelconta' || $collapse=='cadconta'){ echo "show";}?>" id="submenu2" aria-expanded="false">
+                       <li class="nav-item"><a class="nav-link  <?php if($collapse=='painelconta'){ echo "text-secondary";}?>" href="<?=$path?>/Home/conta">Painel</a></li>
+                       <li class="nav-item"><a class="nav-link <?php if($collapse=='cadconta'){ echo "text-secondary";}?>" href="<?=$path?>/Home/cadconta">Cadastro</a></li>
+                    </ul>
+                </li>
                
             </ul>
         </div>
