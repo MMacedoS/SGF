@@ -20,7 +20,7 @@ $meses = array(
             <h1 class="display-4 d-none d-sm-block">
             Dados Cartões
             </h1>
-            <p class="lead d-none d-sm-block">Historico</p>
+            <!-- <p class="lead d-none d-sm-block">Historico</p> -->
 
            
             <div class="row mb-3">
@@ -30,34 +30,14 @@ $meses = array(
                             <div class="rotate">
                                 <i class="fa fa-user fa-4x"></i>
                             </div>
-                            <h6 class="text-uppercase">Cartão</h6>
-                            <h1 class="display-4">R$ 134</h1>
+                            <h6 class="text-uppercase">adicionar Cartão</h6>
+                            <h1 class="display-4"></h1>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-sm-6 py-2" onclick="abrirCartao('opa')">
-                    <div class="card text-white bg-danger h-100">
-                        <div class="card-body bg-danger">
-                            <div class="rotate">
-                                <i class="fa fa-list fa-4x"></i>
-                            </div>
-                            <h6 class="text-uppercase">Cartão 2</h6>
-                            <h1 class="display-4">R$ 87</h1>
-                        </div>
-                    </div>
-                </div>
+                
                
-                <div class="col-xl-3 col-sm-6 py-2" onclick="abrirCartao('opa')">
-                    <div class="card text-white bg-success h-100">
-                        <div class="card-body">
-                            <div class="rotate">
-                                <i class="fa fa-share fa-4x"></i>
-                            </div>
-                            <h6 class="text-uppercase">Cartão 3</h6>
-                            <h1 class="display-4">R$ 36</h1>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <!--/row-->
 

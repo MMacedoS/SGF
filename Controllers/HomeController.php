@@ -20,7 +20,7 @@ class HomeController extends Controller{
         $this->mostrarIndex('conta',$this->dados,'painelconta');
     }
     public function cadconta(){
-        $this->mostrarIndex('cadcartao',$this->dados,'cadconta');
+        $this->mostrarIndex('cadconta',$this->dados,'cadconta');
     }
     
 }
