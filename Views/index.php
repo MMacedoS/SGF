@@ -264,7 +264,7 @@ function dataAtualFormatada() {
 
         html+='</div>';       
         html+='</div><div class="modal-footer">';
-        html+='<button type="button" class="btn btn-primary">Salvar</button>';
+        html+='<button type="button" class="btn btn-primary salvar">Salvar</button>';
         html+='<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>';
         html+=' </div>';
 
@@ -285,6 +285,16 @@ function abrirMov(mes){
     //     });
     
 }
+
+$(document).on('click','.salvar',function(){
+    event.preventDefault();
+    // $.post('./funcoes.php', dados,function(retorna){
+    //     $('#mensagem').addClass('text-success');
+    //         $('#mensagem').text(retorna);
+    //   });
+    window.alert("Sucesso");
+
+});
 
 
 </script>

@@ -33,7 +33,7 @@
         </ul> -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#myAlert" data-toggle="collapse">Nome do Usuário</a>
+                <a class="nav-link" href="#myAlert" data-toggle="collapse"><?=$this->dados[0]['usuario']?></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">Sair</a>
